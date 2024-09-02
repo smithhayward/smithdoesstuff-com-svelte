@@ -15,6 +15,6 @@
 
 <div class="flex flex-row h-svh bg-slate-200">
 
-    <div transition:fly class=" text-nowrap mx-auto my-auto text-4xl">{$heroString}</div>
+    <div transition:fade={{duration:800}} class=" text-nowrap mx-auto my-auto text-4xl">{$heroString}</div>
 
 </div>
