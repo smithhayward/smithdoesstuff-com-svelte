@@ -150,10 +150,10 @@ let bdr = false;
             <a on:click={()=> { mode = 'summary';}} class="{mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">Summary</a>
         </div>
         <div class="mt-3">
-            <a on:click={()=> { mode = 'responsibilities';}} class="{mode==='responsibilities'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
+            <a on:click={()=> { mode = 'responsibilities';}} class="{mode==='responsibilities'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">The Work</a>
         </div>
         <div class="mt-3">
-            <a on:click={()=> { mode = 'successes';}} class="{mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
+            <a on:click={()=> { mode = 'successes';}} class="{mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">Achivements</a>
         </div>
 
     </div>
