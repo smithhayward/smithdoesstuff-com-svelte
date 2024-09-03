@@ -32,9 +32,9 @@
     </div>
 
 <div class="flex flex-col my-6 sm:my-auto ">
-    <a href="/resume.pdf" class=" text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.1em] hover:font-bold hover:text-black transition-all duration-300 " >
+    <!-- <a href="/resume.pdf" class=" text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.1em] hover:font-bold hover:text-black transition-all duration-300 " >
         <button class="">
-            Download Resume</button></a>
+            Download Resume</button></a> -->
     <a href="#experience" class=" text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.1em] hover:font-bold hover:text-black transition-all duration-300 " >
         <button class="">
             Job Experience Walkthrough</button></a>
@@ -62,6 +62,6 @@
 	*{ font-family: Nunito, Helvetica, sans-serif;}
 
 div {
-    border: 1px solid pink;
+    border: 0px solid pink;
 }
 </style>
