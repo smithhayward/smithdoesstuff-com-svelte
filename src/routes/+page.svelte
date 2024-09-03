@@ -17,6 +17,9 @@
         $heroString = "Business Analyst";
     }, 4500);
 
+
+let mode = 'summary';
+
 </script>
 
 
@@ -50,20 +53,86 @@
 
 
 {#each jobFile as job, i}
-<div id="experience{i}" class="flex flex-col h-svh justify-center bg-slate-300 border-slate-700">
-    <div class="mx-auto mt-12">
-        { #if i > 0 }<a href="#experience{i-1}" class="m-2 h-12 mx-4 p-4">Prior</a>
-        
-        {:else}
-        <a href="#index" class="m-2 h-12 mx-4 p-4">Home</a>
+<div id="experience{i}" class="flex flex-col h-svh bg-slate-300 border-slate-700">
+       <div class=" mt-8 mx-auto text-xl font-bold">{job.title}</div>
+        <div class="mx-auto">{job.start} - {job.end}</div>
+    <div class="flex flex-col mx-auto h-full border-red-700">
+
+        {#if mode === 'summary'}
+        <div class="mx-6 my-2 border border-slate-500">
+            {#each job.summary as sentence}
+                <div class="my-2 p-2 ">{sentence}</div>
+            {/each}
+
+
+        </div>
+        {:else if mode === 'responsibilities'}
+        <div class="mx-6 my-2 border border-slate-500">{job.responsibilities}</div>
+        {:else if mode === 'successes'}
+        <div class="mx-6 my-2 border border-slate-500">{job.successes}</div>
         {/if}
+
     </div>
-    <div class="mx-auto my-auto border-4 border-red-700">
-        {job.title}
-    </div>
-    <div class="mx-auto mb-12">
-        { #if i < jobFile.length-1 }<a href="#experience{i+1}" class="m-2 h-12 mx-4 p-4">Next</a>{/if}
-    </div>
+
+
+
+<div class="flex flex-row m-2 p-2 justify-between">
+    <div class="flex flex-col mb-12 space-y-5">
+        <div class="">
+            { #if i > 0 }
+                <a
+                    on:click={()=> { mode = 'summary';}}
+                    href="#experience{i-1}"
+                    class=" py-2 px-5 bg-teal-500 rounded-sm rounded-t-2xl">
+                    Prior
+                </a>
+            
+            {:else}
+            <a 
+                href="#index" 
+                class=" py-2 px-5 bg-teal-600 rounded-md ">
+                Home
+            </a>
+            
+            {/if}
+            
+        </div>
+
+            <div class="">
+                { #if i < jobFile.length-1 }
+                <a 
+                    on:click={()=> { mode = 'summary';}}
+                    href="#experience{i+1}" class=" py-2 px-5 bg-teal-500 rounded-sm rounded-b-2xl">
+                    Next
+                </a>
+                
+                {:else}
+                
+                <a 
+                    href="#skills" 
+                    class=" py-2 px-5 bg-teal-600 rounded-md ">
+                    Skills & Knowledge
+                    </a>
+                
+                {/if}
+            </div>
+        </div>
+
+
+        <div class="flex flex-col space-y-3">
+            <div class="">
+                <a on:click={()=> { mode = 'responsibilities';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
+            </div>
+            <div class="">
+                <a on:click={()=> { mode = 'successes';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
+            </div>
+            <div class="">
+                <a on:click={()=> { mode = 'summary';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">Summary</a>
+            </div>
+        </div>
+</div>
+
+
 </div>
 {/each}
 
