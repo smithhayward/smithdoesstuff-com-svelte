@@ -42,12 +42,12 @@ let bdr = false;
         <a href="#experience0" class=" shadow-lg shadow-slate-700 text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.08em] hover:font-bold hover:text-black transition-all duration-300 " >
             <button class="">
                 Job Experience Walkthrough</button></a>
-        <a href="#skills" class=" shadow-lg shadow-slate-700 text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.08em] hover:font-bold hover:text-black transition-all duration-300 " >
+        <!-- <a href="#skills" class=" shadow-lg shadow-slate-700 text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.08em] hover:font-bold hover:text-black transition-all duration-300 " >
             <button class="">
                 Skills & Knowledge</button></a>
         <a href="#consulting" class=" shadow-lg shadow-slate-700 text-white my-2 text-center min-w-80 mx-auto p-2 px-4 rounded-xl bg-teal-600 border-2 hover:bg-teal-500 hover:border-2 hover:border-teal-900 hover:my-2 hover:text-[1.08em] hover:font-bold hover:text-black transition-all duration-300 " >
             <button class="">
-                Consulting Services</button></a>
+                Consulting Services</button></a> -->
 
     </div>
 </div>
@@ -134,12 +134,12 @@ let bdr = false;
             
             {:else}
             
-            <a 
+            <!-- <a 
                 href="#skills" 
                 class="pl-12 pr-4 py-2 bg-teal-600 rounded-md ">
                 Skills & Knowledge
                 </a>
-            
+             -->
             {/if}
         
     </div>
