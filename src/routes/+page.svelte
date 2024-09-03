@@ -145,24 +145,24 @@ let bdr = false;
     </div>
 
 
-    <div class="flex flex-col space-y-2 {bdr?"border border-slate-800":""}">
+    <div class="flex flex-col space-y-2 overflow-visible {bdr?"border border-slate-800":""}">
         <!-- <div class="text-xs {bdr?"border border-red-800":""} pb-0">PAGE SELECTOR</div> -->
         
             <a 
                 on:click={()=> { mode = 'summary';}}
-                class="{mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-left pr-16 -mr-12">
+                class="{mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-center">
             Summary</a>
         
         
             <a 
                 on:click={()=> { mode = 'resp';}}
-                class="{mode==='resp'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-left pr-16 -mr-12">
+                class="{mode==='resp'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-center">
             The Work</a>
         
         
             <a
                 on:click={()=> { mode = 'successes';}}
-                class="{mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-left pr-16 -mr-12">
+                class="{mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl text-center">
             Achivements</a>
         
 
