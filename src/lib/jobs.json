@@ -1,0 +1,106 @@
+[
+{ 
+"id": "1",
+"title": "Business Systems Analyst",
+"company": "Leonardo DRS",
+"companyCallout": "f.k.a. DRS Technologies, Inc.",
+"type": "Full-Time",
+"start": "April 2002",
+"end": "July 2007",
+"buzzwords": ["Solution Design", "Prototyping", "ERP"],
+"summary": ["As one of the few members on the Corporate IT team at the headquarters of a mid-sized DoD contractor, I worked on a wide variety of projects, ranging from rolling out infrastructure monitoring applications to designing and implementing payment processing web functionality in support of several internal charity programs."],
+"skills": ["Active Listening", "Requirement Elicitation", "Requirement Documentation", "Test Design and Execution", "Broad Technical Acumen", "Rapid Skill Acquisition", "Process Analysis", "Database Development in MS Access", "Data Transformation", "Pick-Basic Programming", "Web Development w/ HTML CSS and JavaScript", "Unit Testing", "End-to-End Testing", "Technical Writing"],
+"responsibilities": [{ "id": 1, "content": "Collaborating with department leads and subject matter experts (SMEs) to gather requirements, researching and presenting solution options, and delivering comprehensive solutions aligned with business objectives." },{ "id": 2, "content": "Configuring and testing commercial-off-the-shelf (COTS) software applications to ensure they meet business requirements and performance standards." },{ "id": 3, "content": "Developing and implementing data transformation processes and data delivery solutions using SFTP to ensure secure and reliable data exchange." },{ "id": 4, "content": "Coordinating with vendor representatives to manage service delivery, aligning it with project timelines and quality expectations." },{ "id": 5, "content": "Testing and troubleshooting a broad range of internal and external business solutions to ensure they meet functional and quality standards." },{ "id": 6, "content": "Publishing end-user documentation for a wide-variety of systems, including Quick-Start guides as well as in-depth feature explanations." },{ "id": 7, "content": "Researching, evaluating, and implementing data management methodologies to support the organization’s transition to SaaS/Cloud-based solutions." },{ "id": 8, "content": "Learning and adopting new technologies and methodologies toward the alignment of solution delivery with organizational goals." }],
+"successes": [{ "id": 1, "content": "Rescued a software implementation from imminent cancellation by liaising between vendor consultants and key internal stakeholders, ensuring that progress was no longer hindered by needless complaints. Refocused efforts on problem resolution, worked through issues, and successfully rolled out the system." },{ "id": 2, "content": "Migrated Lotus-123 accounting workbooks to Microsoft Excel and created an automated financial statement consolidation solution that eliminated hours of manual work." },{ "id": 3, "content": "Saved our Cash Management team several hours every week by automating the download, aggregation and visualizations of bank transaction data using VBA in Microsoft Excel." },{ "id": 4, "content": "Extremely high customer satisfaction on delivered solutions." },{ "id": 5, "content": "Learned PICK-BASIC and multi-value DB principles to effectively design and develop legacy ERP module enhancements." }]
+}
+,
+{ 
+"id": "2",
+"title": "Programmer Analyst",
+"company": "Cyberweld.com",
+"companyCallout": "",
+"type": "Part-Time",
+"start": "April 2005",
+"end": "May 2005",
+"buzzwords": ["XML", "PHP", "SFTP", "CRON"],
+"summary": ["Contracted to design, code and deploy an automated utility to integrate product data from Yahoo! Store to Google Shopping."],
+"skills": ["XML", "PHP", "Data Analysis", "SFTP", "CRON"],
+"responsibilities": [{ "id": 1, "content": "Investigating available options for source data acquisition." },{ "id": 2, "content": "Analyzing the destination system’s data requirements and designing flat file layouts." },{ "id": 3, "content": "Developing the Yahoo! XML to CSV data transformation and automating a scheduled SFTP transfer to Google." },{ "id": 4, "content": "" },{ "id": 5, "content": "" },{ "id": 6, "content": "" },{ "id": 7, "content": "" },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "The automated XML-to-CSV parser and scheduled SFTP transfer service ran for several years without the need for any maintenance. It was eventually decommissioned upon the client’s successful migration from Yahoo! Store to another e-Commerce platform." },{ "id": 2, "content": "" },{ "id": 3, "content": "" },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+,
+{ 
+"id": "3",
+"title": "Implementation Consultant",
+"company": "Workstream, Inc.",
+"companyCallout": "",
+"type": "Full-Time",
+"start": "July 2007",
+"end": "May 2010",
+"buzzwords": ["HCM", "SaaS", "Consulting"],
+"summary": ["After rapidly acquiring domain knowledge in Compensation Planning during an internal project at DRS, I swiftly onboarded with Workstream to deliver SaaS solutions for distributed compensation planning. Having already achieved mastery of the product, I spent my first day on the job in front of a customer with our delivery team.","In addition to Compensation Planning, I cross-trained and implemented Recruiting & Applicant Tracking solutions as demand required."],
+"skills": ["Requirement Elicitation", "Requirement Documentation", "Business Rule Analysis", "Project Management", "Expectation Management", "Fit/Gap Analysis & Resolution", "SQL", "VBA", "End-User Training", "QA Testing"],
+"responsibilities": [{ "id": 1, "content": "Engaging with compensation managers and directors in a wide range of vertical markets, mapping their specific needs to the features and capabilities of our SaaS product." },{ "id": 2, "content": "Educating customers on the capabilities of the system while working to find satisfactory solutions to any identified gaps." },{ "id": 3, "content": "Communicating data needs to support business and functional requirements, while providing data analysis services to ensure that inbound data meets structural and quality standards." },{ "id": 4, "content": "Performing unit testing on configured modules and providing support to clients during their user acceptance testing phases, occasionally leading to reconfiguration work or the resetting of system expectations." },{ "id": 5, "content": "Working closely with product development on application issues and enhancements, focusing on improving implementation speed to support our strategic goal of competitively reducing total cost of ownership (TCO)." },{ "id": 6, "content": "" },{ "id": 7, "content": "" },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "Discovered and implemented several process improvement opportunities within Professional Services, most notably creating dynamic templates mapped to our system’s capabilities and developing an Excel-based analyzer that clients could use to run high-level data validation before delivering files, which resulted in a drastic reduction in data quality back-and-forth." },{ "id": 2, "content": "Created internal tools to translate multi-dimensional matrices into the data-specific formats required by our system. The senior consultant on my team estimated that it saved him an entire day of work on the first use." },{ "id": 3, "content": "Received consistent praise from customers for my system knowledge, professionalism, and being fun to work with." },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+,
+{ 
+"id": "4",
+"title": "Principal Consultant",
+"company": "Taleo / Oracle",
+"companyCallout": "Taleo was acquired by Oracle in 2012",
+"type": "Full-Time",
+"start": "May 2010",
+"end": "September 2017",
+"buzzwords": ["HCM", "Talent Management", "Pay-for-Performance", "SaaS"],
+"summary": ["Upon leaving Workstream and earning my Bachelors degree in Business from Rutgers University, I had a choice between SuccessFactors and Taleo. I decided to join Taleo based on cultural fit and a shared vision for the future of Human Capital Management (HCM) and how we delivered value to customers.","While at Taleo, I expanded my domain expertise from Compensation Planning to include Recruiting, and Learning Management.","I enjoyed the variety of projects and people I worked with daily, ranging from Chief Information Officers (CIOs) and Chief People Officers (CPOs) to ground-level experts responsible for our projects' success."],
+"skills": ["Trusted Advisory Role", "Data Quality Analysis", "Requirement Elicitation", "Requirement Documentation", "Project Management", "End-User Training", "Fit/Gap Analysis", "QA Testing", "HTML & CSS "],
+"responsibilities": [{ "id": 1, "content": "Served as a SME on our product portfolio for prospects and clients, and was regularly called upon to participate in late-stage sales meetings to validate detailed use cases for fit, while collaborating with sales to find creative solutions when gaps were found." },{ "id": 2, "content": "Project delivery activities including status meetings, process and product instruction, system configuration and testing as well as other supporting functions." },{ "id": 3, "content": "Collaborated internally across several departments, including Sales, Operations, Product Management, Professional Services, and Support, to ensure our customers received the level of service they were promised." },{ "id": 4, "content": "Following the acquisition of Taleo by Oracle, I began working with a new Social Sourcing platform that integrated our recruiting product with various social networking platforms. In this role, I had the opportunity to exercise my design skills by working with HTML and CSS to align our system interface with clients’ specific branding requirements." },{ "id": 5, "content": "" },{ "id": 6, "content": "" },{ "id": 7, "content": "" },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "Led dozens of product implementations, ensuring that customers and their end-users remained satisfied throughout the process and were pleased with the value we delivered." },{ "id": 2, "content": "Drawing on my success at Workstream, I identified several process improvement opportunities, with the most significant being a shift from a free-form, document-based requirements collection method to an Excel-based, tailored solution. This change allowed customers to populate 80% of the information that we previously would have spent several days collecting in meetings." },{ "id": 3, "content": "" },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+,
+{ 
+"id": "5",
+"title": "Senior Business Analyst",
+"company": "CVS Health",
+"companyCallout": "",
+"type": "Full-Time",
+"start": "January 2018",
+"end": "August 2020",
+"buzzwords": ["PBM", "BRD", "FRD", "Agile", "Elicitation"],
+"summary": ["Starting as a 3rd-party consultant, I was converted to full-time 5 weeks into a 12 week CTH contract. I spent the majority of my time working with the owners of the pharmacy benefits management (PBM) system, who worked closely with end-user customers.","As customer processes evolved, we needed to add features that enabled them to continuously improve and innovate.","I particularly appreciated the collaboration we fostered, not only within the Business Analysis team, but also cross-functionally with the Development, QA, and Operations teams."],
+"skills": ["Rapid Skill Acquisition", "Requirement Elicitation", "Requirement Analysis", "User Flow Diagramming", "Data Flow Diagramming", "Mentoring"],
+"responsibilities": [{ "id": 1, "content": "Balancing 1-3 medium to high complexity projects simultaneously, focusing on drafting BRD/FRD documents or User Stories depending on the project team’s preference." },{ "id": 2, "content": "Leading requirements elicitation sessions in a virtual environment." },{ "id": 3, "content": "Conducting offline requirement maturation and analysis to minimize ambiguity and identify gaps to address with the team in the next session." },{ "id": 4, "content": "Creating screen mock-ups to support system changes being requested." },{ "id": 5, "content": "Maintaining requirements traceability matrices ensuring business requirements are satisfied with adequate functional details." },{ "id": 6, "content": "Creating and maintaining RACI documentation to ensure proper involvement from key stakeholders." },{ "id": 7, "content": "Reviewing teammates’ deliverables against departmental documentation quality metrics and collaborating on necessary updates." },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "For one of our frequently updated systems, I noticed that ongoing changes fit a pattern, so I created a structured requirements template that directly mapped to system functionality. From this structured data I automated the generation of the requirement text, drastically reducing the time spent on writing the documentation while also ensuring consistency in how requirements were worded." },{ "id": 2, "content": "Consistently commended for my analytical and systematic approach by our internal customers." },{ "id": 3, "content": "" },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+,
+{ 
+"id": "6",
+"title": "Business & Data Analyst Consultant",
+"company": "Self-Employed",
+"companyCallout": "",
+"type": "Full-Time",
+"start": "August 2020",
+"end": "January 2022",
+"buzzwords": ["Reconciliation", "Data Mapping", "Process Analysis", "General Ledger"],
+"summary": ["Hired as a consultant to lead a long-running project aimed at simplifying and streamlining the reconciliation of complex GL accounting practices related to gift card management.","Worked closely with a database programmer/analyst and the accounting teams to document processes, uncover hidden complexities, and propose solutions to reduce the time spent sifting through data to match detailed transactions with aggregated GL postings."],
+"skills": ["Rapid Skill Acquisition", "Requirement Elicitation", "Requirement Analysis", "User Flow Diagramming", "Data Flow Diagramming", "Mentoring", "PowerBI", "MS Excel Pivot Tables"],
+"responsibilities": [{ "id": 1, "content": "Creating and implementing a high-level methodology we iterated for each business unit or sub-unit in search of the best mechanism to simplify reconciliation." },{ "id": 2, "content": "Analyzing large volumes of data in Microsoft Excel and Microsoft PowerBI to identify patterns in past manual reconciliation efforts, discovering useful data relationships to exploit for our benefit." },{ "id": 3, "content": "Documenting complex processes and data flows using LucidChart to create a shared understanding of the problem." },{ "id": 4, "content": "" },{ "id": 5, "content": "" },{ "id": 6, "content": "" },{ "id": 7, "content": "" },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "Identified several instances where modifications to upstream data structures could facilitate automated reconciliation, reducing the need for the accounting team to manually address only a small fraction of the previous volume." },{ "id": 2, "content": "Successfully reducing the reconciliation effort enabled the accounting department to reassign team members to more value-added financial analysis work." },{ "id": 3, "content": "" },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+,
+{ 
+"id": "7",
+"title": "Implementation Consultant",
+"company": "Unit4 Software",
+"companyCallout": "",
+"type": "Full-Time",
+"start": "April 2022",
+"end": "April 2024",
+"buzzwords": [""],
+"summary": ["Soon after my contract work was complete, I was contacted by a former colleague who had recently sold his Compensation Planning SaaS startup to Unit4, in need of an experienced and passionate consultant to jump in and take the reins while staff and infrastructure were in transition.","Onboarding was quick, but I was held back by a combination of application defects and the globally distributed structure of the technical team. Thanks to my previous experience with SaaS products and SQL, I persuaded leadership to give me the system permissions necessary to more effectively serve my customers.","After a few months on the job, I began meeting weekly with our Product Manager to discuss our vision for the product based on my experience in the industry and interaction with clients. I drafted dozens of user stories and collaborated with the PM to value-rank features for future releases."],
+"skills": ["Consulting", "Trusted Advisory Role", "Rapid Skill Acquisition", "Requirement Elicitation", "Microsoft Power Automate", "Product Management", "SQL Queries", "mySQL Databases", "Jenkins DevOps", "S3 File Stores"],
+"responsibilities": [{ "id": 1, "content": "Collaborating with compensation managers and directors across various industries, aligning their unique requirements with the functionalities and strengths of our SaaS solution." },{ "id": 2, "content": "Instructing customers on system capabilities, actively seeking mutually acceptable solutions when discrepancies arise." },{ "id": 3, "content": "Communicating data requirements to align with both business and functional objectives, while offering data analysis services to ensure incoming data adhered to structural and quality standards." },{ "id": 4, "content": "Unit testing configured modules and guiding clients through user acceptance testing phases, sometimes necessitating reconfiguration or adjustment to system expectations." },{ "id": 5, "content": "Documenting system issues with thorough explanation of expectations and results including screenshots and extracts from the database." },{ "id": 6, "content": "Partnering with Product Management, utilizing my ten years of Compensation Planning SaaS experience to help develop a robust product roadmap that benefits both Unit4 and our customers." },{ "id": 7, "content": "" },{ "id": 8, "content": "" }],
+"successes": [{ "id": 1, "content": "Within six months of joining Unit4 I had accumulated a deep functional and technical understanding of the platform, becoming a primary resource for other departments." },{ "id": 2, "content": "Implemented a robust workflow to manage complex internal processes with Microsoft Power Automate and Teams Sites to eliminate our reliance on email and Teams chat to coordinate critical activities in a 100% remote working environment." },{ "id": 3, "content": "Successfully delivered 20+ high-touch compensation planning cycles for a dozen existing clients while also onboarding several new customers each year." },{ "id": 4, "content": "" },{ "id": 5, "content": "" }]
+}
+]						
