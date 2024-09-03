@@ -25,7 +25,7 @@ let bdr = false;
 </script>
 
 
-<div id="index" class="flex flex-col md:flex-row h-svh bg-slate-200">
+<div id="index" class="flex flex-col md:flex-row h-svh bg-slate-200 overflow-hidden">
 
     <div class="flex flex-col mx-auto my-auto sm:flex-row ">
     <div class="flex flex-col my-auto mx-auto sm:min-w-[530px] border-slate-700 md:bg-slate-50 md:mx-16 md:p-24 md:shadow-2xl">
@@ -98,7 +98,7 @@ let bdr = false;
 
 
 
-<div class="flex flex-row m-2 p-2 justify-between {bdr?"border border-slate-800":""} align-middle">
+<div class="flex flex-row m-2 p-2 justify-between  {bdr?"border border-slate-800":""} align-middle">
 
     <div class="flex flex-col space-y-2 mt-6 -ml-8 {bdr?"border border-red-800":""}">
     
@@ -113,6 +113,7 @@ let bdr = false;
             
             {:else}
             <a 
+                on:click={()=> { mode = 'summary';}} 
                 href="#index" 
                 class=" pl-12 pr-4 py-2 bg-teal-600 rounded-r-2xl ">
                 Home
@@ -143,16 +144,16 @@ let bdr = false;
     </div>
 
 
-    <div class="flex flex-col -mr-12{bdr?"border border-slate-800":""}">
+    <div class="flex flex-col {bdr?"border border-slate-800":""}">
         <!-- <div class="text-xs {bdr?"border border-red-800":""} pb-0">PAGE SELECTOR</div> -->
         <div class="mt-3">
-            <a on:click={()=> { mode = 'summary';}} class="pr-14 {mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">Summary</a>
+            <a on:click={()=> { mode = 'summary';}} class="{mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">Summary</a>
         </div>
         <div class="mt-3">
-            <a on:click={()=> { mode = 'responsibilities';}} class="pr-14 {mode==='responsibilities'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
+            <a on:click={()=> { mode = 'responsibilities';}} class="{mode==='responsibilities'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
         </div>
         <div class="mt-3">
-            <a on:click={()=> { mode = 'successes';}} class="pr-14 {mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
+            <a on:click={()=> { mode = 'successes';}} class="{mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
         </div>
 
     </div>
