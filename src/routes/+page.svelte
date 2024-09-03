@@ -56,8 +56,10 @@ let bdr = false;
 
 {#each jobFile as job, i}
 <div transition:fade  id="experience{i}" class="flex flex-col h-svh bg-slate-300">
-       <div class=" mt-8 mx-auto text-[1.3em] font-bold">{job.title}</div>
-        <div class="mx-auto text-[0.85em]">{job.start} - {job.end}</div>
+        <div class="w-full text-end pr-4 mx-auto text-[0.85em]  mt-8 ">{job.start} - {job.end}</div>       
+    <div class=" w-full text-center bg-slate-400 mx-auto text-[1.3em] font-bold">{job.title}</div>
+        <div class=" w-full text-center bg-slate-200 mx-auto font-bold text-purple-800 text-[1.06em]">{job.company}</div>
+
     
     <div id="body{i}" class="flex flex-col mx-auto h-full max-h-[600px] overflow-auto">
 
