@@ -1,6 +1,7 @@
 <script>
 
     import { writable } from 'svelte/store';
+    import {fade} from 'svelte/transition';
     import jobFile from '$lib/jobs.json';
     
     $: heroString = writable("");
@@ -19,6 +20,7 @@
 
 
 let mode = 'summary';
+let bdr = false;
 
 </script>
 
@@ -53,89 +55,112 @@ let mode = 'summary';
 
 
 {#each jobFile as job, i}
-<div id="experience{i}" class="flex flex-col h-svh bg-slate-300 border-slate-700">
-       <div class=" mt-8 mx-auto text-xl font-bold">{job.title}</div>
-        <div class="mx-auto">{job.start} - {job.end}</div>
-    <div class="flex flex-col mx-auto h-full border-red-700">
+<div transition:fade  id="experience{i}" class="flex flex-col h-svh bg-slate-300">
+       <div class=" mt-8 mx-auto text-[1.3em] font-bold">{job.title}</div>
+        <div class="mx-auto text-[0.85em]">{job.start} - {job.end}</div>
+    
+    <div id="body{i}" class="flex flex-col mx-auto h-full max-h-[600px] overflow-auto">
 
         {#if mode === 'summary'}
-        <div class="mx-6 my-2 border border-slate-500">
+        <div id="summary{i}" class="flex flex-col mx-6 my-2">
             {#each job.summary as sentence}
-                <div class="my-2 p-2 ">{sentence}</div>
+                <div class="my-0.5 p-1 text-[.87em] ">{sentence}</div>
             {/each}
+        
+        <div id="skills{i}" class="flex flex-wrap mt-1 text-[0.75em] bg-slate-400 rounded-3xl p-3">
+            { #each job.skills as skill }
+                <div class="bg-slate-200 px-2 mx-0.5 my-1 p-0.5 rounded-md">{skill}</div>
+            {/each}
+        </div>
 
 
         </div>
+
         {:else if mode === 'responsibilities'}
-        <div class="mx-6 my-2 border border-slate-500">{job.responsibilities}</div>
+
+        <div class="mx-6 my-2 {bdr?"border border-slate-800":""}">
+            {#each job.responsibilities as responsibility}
+                <div class="my-0.5 p-1 text-[.87em] ">{responsibility.content}</div>
+            {/each}
+        </div>
+
         {:else if mode === 'successes'}
-        <div class="mx-6 my-2 border border-slate-500">{job.successes}</div>
+
+        <div class="mx-6 my-2 {bdr?"border border-slate-800":""}">
+            {#each job.successes as success}
+                <div class="my-0.5 p-1 text-[.87em] ">{success.content}</div>
+            {/each}
+        </div>
+
         {/if}
 
     </div>
 
 
 
-<div class="flex flex-row m-2 p-2 justify-between">
-    <div class="flex flex-col mb-12 space-y-5">
-        <div class="">
+<div class="flex flex-row m-2 p-2 justify-between {bdr?"border border-slate-800":""} align-middle">
+
+    <div class="flex flex-col space-y-2 mt-6 -ml-8 {bdr?"border border-red-800":""}">
+    
+        
             { #if i > 0 }
                 <a
                     on:click={()=> { mode = 'summary';}}
                     href="#experience{i-1}"
-                    class=" py-2 px-5 bg-teal-500 rounded-sm rounded-t-2xl">
+                    class=" pl-12 pr-4 py-2 bg-teal-500 rounded-sm rounded-r-2xl">
                     Prior
                 </a>
             
             {:else}
             <a 
                 href="#index" 
-                class=" py-2 px-5 bg-teal-600 rounded-md ">
+                class=" pl-12 pr-4 py-2 bg-teal-600 rounded-r-2xl ">
                 Home
             </a>
             
             {/if}
             
-        </div>
+        
 
-            <div class="">
-                { #if i < jobFile.length-1 }
-                <a 
-                    on:click={()=> { mode = 'summary';}}
-                    href="#experience{i+1}" class=" py-2 px-5 bg-teal-500 rounded-sm rounded-b-2xl">
-                    Next
+        
+            { #if i < jobFile.length-1 }
+            <a 
+                on:click={()=> { mode = 'summary';}}
+                href="#experience{i+1}" class=" pl-12 pr-4 py-2 bg-teal-500 rounded-sm rounded-r-2xl ">
+                Next
+            </a>
+            
+            {:else}
+            
+            <a 
+                href="#skills" 
+                class="pl-12 pr-4 py-2 bg-teal-600 rounded-md ">
+                Skills & Knowledge
                 </a>
-                
-                {:else}
-                
-                <a 
-                    href="#skills" 
-                    class=" py-2 px-5 bg-teal-600 rounded-md ">
-                    Skills & Knowledge
-                    </a>
-                
-                {/if}
-            </div>
-        </div>
+            
+            {/if}
+        
+    </div>
 
 
-        <div class="flex flex-col space-y-3">
-            <div class="">
-                <a on:click={()=> { mode = 'responsibilities';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
-            </div>
-            <div class="">
-                <a on:click={()=> { mode = 'successes';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
-            </div>
-            <div class="">
-                <a on:click={()=> { mode = 'summary';}} class="py-1 px-5 bg-slate-400 italic rounded-3xl">Summary</a>
-            </div>
+    <div class="flex flex-col -mr-12{bdr?"border border-slate-800":""}">
+        <!-- <div class="text-xs {bdr?"border border-red-800":""} pb-0">PAGE SELECTOR</div> -->
+        <div class="mt-3">
+            <a on:click={()=> { mode = 'summary';}} class="pr-14 {mode==='summary'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 italic rounded-3xl">Summary</a>
         </div>
+        <div class="mt-3">
+            <a on:click={()=> { mode = 'responsibilities';}} class="pr-14 {mode==='responsibilities'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">The Work</a>
+        </div>
+        <div class="mt-3">
+            <a on:click={()=> { mode = 'successes';}} class="pr-14 {mode==='successes'?'text-bold bg-purple-800 text-white':'bg-slate-400'} py-1 px-5 bg-slate-400 italic rounded-3xl">Achivements</a>
+        </div>
+
+    </div>
 </div>
 
 
 </div>
 {/each}
-
 
 <div id="consulting" class="flex flex-col h-svh justify-center bg-slate-200">
 
@@ -148,7 +173,5 @@ let mode = 'summary';
 
 	*{ font-family: Nunito, Helvetica, sans-serif;}
 
-div {
-    border: 0px solid pink;
-}
+
 </style>
