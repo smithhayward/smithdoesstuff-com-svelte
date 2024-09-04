@@ -19,7 +19,7 @@
     }, 4500);
 
 
-let mode = 'resp';
+let mode = 'summary';
 let bdr = false;
 
 </script>
@@ -66,13 +66,13 @@ let bdr = false;
         {#if mode === 'summary'}
         <div id="summary{i}" class="flex flex-col mx-6 my-2 lg:px-12">
             {#each job.summary as sentence}
-                <div class="my-0.5 lg:my-4 p-1 text-[.87em] md:text-lg">{sentence}</div>
+                <div class="my-0.5 lg:my-2 p-1 text-[.87em] md:text-lg">{sentence}</div>
             {/each}
         
-        <div id="skills{i}" class="flex flex-wrap mt-1 p-2 text-[0.75em] lg:text-lg lg:px-3 bg-slate-400 rounded-2xl ">
-            <div class="w-full font-bold ">Skills & Technologies</div>
+        <div id="skills{i}" class="flex flex-wrap mt-1 p-2 text-[0.75em] lg:mt-12 lg:text-lg lg:px-3 bg-slate-400 rounded-2xl ">
+            <div class="w-full font-bold ">Skills & Technologies Used</div>
             { #each job.skills as skill }
-                <div class="bg-slate-200 px-2 mx-0.5 my-1 p-0.5 rounded-m">{skill}</div>
+                <div class="bg-slate-200 px-2 mx-0.5 my-1 p-0.5 rounded-lg">{skill}</div>
             {/each}
         </div>
 
@@ -81,7 +81,7 @@ let bdr = false;
 
         {:else if mode === 'resp'}
 
-        <div class="mx-4 my-2 {bdr?"border border-slate-800":""} lg:px-12">
+        <div class="mx-6 my-2 {bdr?"border border-slate-800":""} lg:px-12">
             {#each job.responsibilities as responsibility}
             {#if responsibility.content !== ''}
                 <div class="my-0.5 p-1 text-[0.9em] md:text-lg lg:m-1 lg:p-1 lg:rounded-xl lg:flex ">
@@ -99,7 +99,7 @@ let bdr = false;
             {#each job.successes as success}
             {#if success.content !== ''}
                 <div class="my-0.5 p-1 text-[.87em] md:text-lg lg:text-lg lg:flex ">
-                    <div class="hidden lg:block pr-4 text-3xl">&#10032;</div>
+                    <div class="hidden lg:block pr-4 text-2xl">&#10032;</div>
                     {success.content}
                 </div>
             {/if}
