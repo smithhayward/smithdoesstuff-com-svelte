@@ -19,16 +19,16 @@
     }, 4500);
 
 
-let mode = 'summary';
+let mode = 'resp';
 let bdr = false;
 
 </script>
 
 
-<div id="index" class="flex flex-col md:flex-row h-svh bg-slate-200 overflow-hidden">
+<div id="index" class="flex flex-col lg:flex-row h-svh bg-slate-200 overflow-hidden ">
 
-    <div class="flex flex-col mx-auto my-auto sm:flex-row ">
-    <div class="flex flex-col my-auto mx-auto sm:min-w-[530px] border-slate-700 md:bg-slate-50 md:mx-16 md:p-24 md:shadow-2xl">
+    <div class="flex flex-col mx-auto my-auto lg:flex-row ">
+    <div class="flex flex-col my-auto mx-auto lg:min-w-[530px]  border-slate-700 lg:bg-slate-50 lg:mx-16 lg:p-24 lg:shadow-2xl">
         <div class="text-5xl">Smith Hayward</div>
     
         <div class=" h-10 text-3xl italic">{#key $heroString}<span>{$heroString}</span>{/key}</div>
@@ -55,24 +55,24 @@ let bdr = false;
 
 
 {#each jobFile as job, i}
-<div transition:fade  id="experience{i}" class="flex flex-col h-svh bg-slate-300">
-        <div class="w-full text-end pr-4 mx-auto text-[0.85em]  mt-8 ">{job.start} - {job.end}</div>       
-    <div class=" w-full text-center bg-slate-400 mx-auto text-[1.3em] font-bold">{job.title}</div>
-        <div class=" w-full text-center bg-slate-200 mx-auto font-bold text-purple-800 text-[1.06em]">{job.company}</div>
+<div transition:fade  id="experience{i}" class="flex flex-col h-svh lg:max-w-[1024px] lg:mx-auto bg-slate-300">
+        <div class="w-full text-end pr-4 mx-auto text-[0.85em] sm:text-[1em] lg:text-lg mt-8 ">{job.start} - {job.end}</div>
+    <div class=" w-full text-center bg-slate-400 mx-auto text-xl lg:text-3xl font-bold">{job.title}</div>
+        <div class=" w-full text-center bg-slate-200 mx-auto font-bold text-purple-800 text-lg lg:text-2xl">{job.company}</div>
 
     
-    <div id="body{i}" class="flex flex-col mx-auto h-full max-h-[600px] overflow-auto">
+    <div id="body{i}" class="flex flex-col mx-auto h-full max-h-[600px] overflow-auto lg:overflow-clip">
 
         {#if mode === 'summary'}
-        <div id="summary{i}" class="flex flex-col mx-6 my-2">
+        <div id="summary{i}" class="flex flex-col mx-6 my-2 lg:px-12">
             {#each job.summary as sentence}
-                <div class="my-0.5 p-1 text-[.87em] ">{sentence}</div>
+                <div class="my-0.5 lg:my-4 p-1 text-[.87em] md:text-lg">{sentence}</div>
             {/each}
         
-        <div id="skills{i}" class="flex flex-wrap mt-1 text-[0.75em] bg-slate-400 rounded-2xl p-2">
-            <div class="w-full font-bold text-[1.1em]">Skills & Technologies</div>
+        <div id="skills{i}" class="flex flex-wrap mt-1 p-2 text-[0.75em] lg:text-lg lg:px-3 bg-slate-400 rounded-2xl ">
+            <div class="w-full font-bold ">Skills & Technologies</div>
             { #each job.skills as skill }
-                <div class="bg-slate-200 px-2 mx-0.5 my-1 p-0.5 rounded-md">{skill}</div>
+                <div class="bg-slate-200 px-2 mx-0.5 my-1 p-0.5 rounded-m">{skill}</div>
             {/each}
         </div>
 
@@ -81,17 +81,28 @@ let bdr = false;
 
         {:else if mode === 'resp'}
 
-        <div class="mx-6 my-2 {bdr?"border border-slate-800":""}">
+        <div class="mx-4 my-2 {bdr?"border border-slate-800":""} lg:px-12">
             {#each job.responsibilities as responsibility}
-                <div class="my-0.5 p-1 text-[.87em] ">{responsibility.content}</div>
+            {#if responsibility.content !== ''}
+                <div class="my-0.5 p-1 text-[0.9em] md:text-lg lg:m-1 lg:p-1 lg:rounded-xl lg:flex ">
+                    <div class="hidden lg:block pr-4 text-2xl">&#9874;</div>
+                    {responsibility.content}
+
+                </div>
+            {/if}
             {/each}
         </div>
 
         {:else if mode === 'successes'}
 
-        <div class="mx-6 my-2 {bdr?"border border-slate-800":""}">
+        <div class="mx-6 my-2 {bdr?"border border-slate-800":""} lg:px-12">
             {#each job.successes as success}
-                <div class="my-0.5 p-1 text-[.87em] ">{success.content}</div>
+            {#if success.content !== ''}
+                <div class="my-0.5 p-1 text-[.87em] md:text-lg lg:text-lg lg:flex ">
+                    <div class="hidden lg:block pr-4 text-3xl">&#10032;</div>
+                    {success.content}
+                </div>
+            {/if}
             {/each}
         </div>
 
